@@ -1,0 +1,98 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//fastly.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+   
+   .nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }
+   @font-face {
+    font-family: 'giantsR';
+    src: url('/gshop/fonts/Giants-Regular.otf') format('truetype');
+}
+
+/* s : goolgle font */
+/* fallback */
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 100 700;
+    src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v215/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2) format('woff2');
+  }
+  
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+/* e : goolgle font */
+
+/* Common */
+*{margin:0; padding:0; color:#333; font-family: 'NanumBarunGothic';}
+
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,img, a{margin:0;padding:0;text-decoration:none;word-break:keep-all;}
+img,fieldset{border:0}
+ul,ol,li,dl,dd,dt{list-style:none; font-family: 'giantsR';}
+h2{font-family: 'giantsR'; font-size: 30px;}
+em,address{font-style:normal}
+a{text-decoration:none; outline:none; display:block;}
+
+address{margin:0;padding:0}
+em{margin:0;padding:0}
+tr,th{display:block;}
+img{vertical-align: top;border: 0;}
+.m_block{display:block;}
+.pc_block, .util_btn{display:none;}
+
+button{width: 150px; cursor:pointer; border:1px solid #ccc; background:#fff;border-radius: 5px;}
+input{border:none; background:#fff; line-height: 37px;}
+
+
+@media screen and (min-width:360px){
+
+}
+
+@media screen and (min-width:768px){
+
+}
+
+@media screen and (min-width:1024px){
+/* Common */
+.m_block{display:none;}
+.pc_block, .util_btn{display:block;}
+
+
+
+
+}

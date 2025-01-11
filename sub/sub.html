@@ -1,0 +1,396 @@
+<?php include '../header.html'; ?>
+<?php include '../glnb.html'; ?>
+  <style>
+
+    /* Sticky Tabs */
+    .tabs {display:flex; position: sticky; top: 0; background-color: #fff;z-index: 1000;}
+    .tabs a {width:calc(100% / 4);
+      color: #333; text-align: center;
+      text-decoration: none;
+      padding: 20px;
+      display: block;
+      border-bottom:2px solid #aaa; 
+      
+    }
+    .tabs .on {color:#ddd; border-bottom:2px solid #ddd;}
+    .tabs a.active {color: #007bff;}
+    /* Section styles */
+    section {
+      border-bottom: 1px solid #ddd;
+      scroll-margin-top: 60px; /* Default offset for smooth scroll */
+    }
+    section:last-child{border-bottom: none;}
+
+    .btn_qucik_wrap{position: fixed;
+    bottom: 20px;
+    right: 80px;}
+  </style>
+<!-- s: cont -->
+<div class="cont">
+    <!-- top 버튼 -->
+     <div class="btn_qucik_wrap">
+        <ul>
+            <li><a href="#" onclick="scrollup()">up</a></li>
+            <li><a href="#" onclick="scrolldown()">down</a></li>
+            <li><a href="https://www.giantsclub.com/html/" target="_blank">홈페이지</a></li>
+        </ul>
+     </div>
+
+    <!-- s: base_wrap -->
+    <div class="sub_cont_wrap">
+        <div class="inner">
+            <div class="detail_sub_wrap">
+                <!-- s: detail_main -->
+                <div class="detail_main">
+                    <div class="item_img">
+                        <div class="imglist"><img src="/gshop/img/uniform1.png" alt=""></div>
+                    </div>
+                    <div class="txt">
+                        <p class="stit">의류 &gt; 상의 (Top)</p>
+                        <p class="name">자이언츠 숏 슬리브 &#40;white&#41;</p>
+                        <div class="detail_price_bx">
+                            <div class="price_bx">
+                                <span class="tit">가격</span>
+                                <p class="sale_per">50%</p>
+                                <p class="price">45,000원</p>
+                                <span class="sale_price">94,000원</span>
+                            </div>
+                            <div class=""><span class="tit">사이즈</span>
+                                <select name="sizeCode" class="sel_sz">
+                                    <option value="">사이즈를 선택해주세요.</option>
+                                        <option value="">90</option>
+                                        <option value="">95</option>
+                                        <option value="">100</option>
+                                        <option value="">105</option>
+                                        <option value="">110</option>
+                                        <option value="">115</option>
+                                        <option value="">120</option>
+                                    
+                                </select>
+                            </div>
+                            <div>
+                                <span class="tit">수량</span>
+                                <div class="num_btn">
+                                    <p id="minus_btn"  class="count_btn">-</p>
+                                    <p class="num_count">
+                                      <input type="text" id="quantity_input" min="1" name="quantity" 
+                                      value="1" readonly="" style="text-align: center;">
+                                    </p>
+                                    <p id="plus_btn" class="count_btn">+</p>
+                                </div>                                 
+                            </div>
+                            <div class=""><span class="tit">마킹</span>
+                                <select name="sizeCode"  class="sel_sz">
+                                    <option value="">옵션 선택</option>
+                                        <option value="">마킹 없음</option>
+                                        <option value="">0번 황성빈</option>
+                                        <option value="">1번 한현희</option>
+                                        <option value="">3번 신윤후</option>
+                                        <option value="">8번 전준우</option>
+                                        <option value="">9번 정훈</option>
+                                        <option value="">12번 정우준</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div id="fixedElement" class="cytptm">
+                            <button id="like_btn" class="like"><img src="/gshop/img/unlike.png" alt="" id="like_img">
+                                <span id="like_count">150</span></button>
+                            <button class="shop_btn">장바구니</button>
+                            <button class="pursh_btn">구매하기</button>
+                        
+                        </div>
+                    </div>
+                </div> <!-- e: detail_main -->
+                <!-- Sticky Tabs -->
+                <div class="tabs">
+                    <a href="#section1" class="tab-link on">상세정보</a>
+                    <a href="#section2" class="tab-link">구매정보</a>
+                    <a href="#section3" class="tab-link">상품후기</a>
+                    <a href="#section4" class="tab-link">상품문의</a>
+                </div>
+
+                <!-- Sections -->
+                <section id="section1" class="detail_info">
+                    <div class="img">
+                        <img src="/gshop/img/text_sub.jpg" alt="">
+                    </div>
+                    <div class="more_btn">
+                        <button>상품설명 더보기</button>
+                    </div>
+                </section>
+                <section id="section2" class="detail_info">
+                    <p class="tit">구매정보</p>
+                    <!-- <div class="purch_info">
+                        <p class="tit">주문방법</p>
+                        <ul>
+                            <li><p>각 코너를 클릭하셔서 들어갑니다.</p></li>
+                            <li><p>사진이나 상품명을 클릭하세요</p></li>
+                            <li><p>장바구니 담기'를 클릭하세요</p></li>
+                            <li><p>장바구니에 넣었습니다" 메시지가 나오면,</p></li>
+                            <li><p>주문상품을 확인한 후 '주문' 버튼을 클릭하세요</p></li>
+                            <li><p>주문버튼을 누르면 '주문서"가 나옵니다.</p></li>
+                            <li><p>주문서를 작성 후 결제하면 주문이 완료됩니다.</p></li>
+                        </ul>
+                    </div> -->
+                    <div class="purch_info">
+                        <p class="sinfo_tit">상품배송</p>
+                        <ul>
+                            <li><p>주문하신 상품은 택배로 발송됩니다. </p></li>
+                            <li><p>주문하신 날로부터 3~7일 안에 받을 수 있습니다.<br>[업체배송] CJ 대한통운 배송조회 : 1588-1255</p></li>
+                            <li><p>최종주문 결제금액 기준 5만원 미만은 3,000원의 배송비가 청구되며
+                                5만원 이상 주문시 무료배송입니다. (도서,산간,오지 일부지역은 배송비가 추가될 수 있습니다.)</p></li>
+                        </ul>
+                    </div>
+                    <div class="purch_info">
+                        <p class="sinfo_tit">교환/반품</p>
+                        <ul>
+                            <li><p>배송비 : 왕복 6,000원 <br>(도서, 산간, 오지, 일부지역은 배송비가 추가될 수 있습니다.)</p></li>
+                            <li><p>상품 수령 후 7일 이내 교환/환불을 요청해야 합니다.</p></li>
+                            <li><p>교환/반품이 불가능한 경우</p></li>
+                            <li><p>반품 요청기간 (수령 후 7일 이내)이 경과한 경우</p></li>
+                            <li><p>상품을 사용(또는 착용, 착화) 혹은 훼손하여 재판매가 어려운 경우</p></li>
+                            <li><p>상품의 택(Tag)또는 라벨 제거, 분리, 분실, 훼손하거나 세트 구성품을 누락한 경우</p></li>
+                            <li><p>고객의 주문에 따라 개별적으로 생산된 상품의 경우 (주문제작 상품 등)</p></li>
+                            <li><p>고객의 변심에 의한 교환 및 반품인 경우 배송비는 '소비자' 부담 입니다.</p></li>
+                            <li><p>상품의 이상에 의한 교환 및 반품인 경우 배송비는 '판매자' 부담 입니다.</p></li>
+                        </ul>
+                    </div>
+                    <div class="purch_info">
+                        <p class="sinfo_tit">고객센터</p>
+                        <ul>
+                            <li><p>반품처 : 인천광역시 서구 북항로177번길 52(원창동),
+                                D동 마이창고 (주)코어커뮤니케이션
+                                </p></li>
+                            <li><p>고객센터: 070-5224-1969
+                                (오전 10시~오후 5시 운영, 토,일 및 공휴일 휴무)
+                                </p></li>
+                            <li><p>개인정보보호 담당자: 김승혜
+                                전화 : 051)791-1992
+                                메일 : core@corecomm.co.kr</p></li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="section3" class="detail_info">
+                    <p class="sinfo_tit">상품후기 <span>(250)</span></p>
+                    <div class="review_bx">
+                        <div class="mark_bx">
+                            <div class="mark">
+                                <p style="width: 20px;">별</p><p>별</p><p>별</p><p>별</p><p>별</p>
+                            </div>
+                        <p>구매자 평점</p></div>
+                        <div class="summary">
+                            <ul>
+                                <li><p class="score"></p>
+                                    <div class="percent">
+                                        <div class="percentline"></div>
+                                        <p class="count"></p>
+                                    </div>
+                                </li>
+                                <li><p class="score"></p>
+                                    <div class="percent">
+                                        <div class="percentline"></div>
+                                        <p class="count"></p>
+                                    </div>
+                                </li>
+                                <li><p class="score"></p>
+                                    <div class="percent">
+                                        <div class="percentline"></div>
+                                        <p class="count"></p>
+                                    </div>
+                                </li>
+                                <li><p class="score"></p>
+                                    <div class="percent">
+                                        <div class="percentline"></div>
+                                        <p class="count"></p>
+                                    </div>
+                                </li>
+                                <li><p class="score"></p>
+                                    <div class="percent">
+                                        <div class="percentline"></div>
+                                        <p class="count"></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id="section4" class="detail_info">
+                    <div class="sinfo_fl">
+                        <p class="sinfo_tit">상품문의</p>
+                        <button>글쓰기</button>
+                    </div>
+                    <table class="cs_table">
+                        <tbody>
+                            <tr>
+                                <td class="num">1</td>
+                                <td class="tit">비밀글입니다.</td>
+                                <td class="name">추**</td>
+                                <td class="day">2024.11.11</td>
+                                <td class="result">답변완료</td>
+                            </tr>
+                            <tr>
+                                <td class="num">2</td>
+                                <td class="tit">비밀글입니다.</td>
+                                <td class="name">추**</td>
+                                <td class="day">2024.11.11</td>
+                                <td class="result">답변완료</td>
+                            </tr>
+                            <tr>
+                                <td class="num">3</td>
+                                <td class="tit">비밀글입니다.</td>
+                                <td class="name">추**</td>
+                                <td class="day">2024.11.11</td>
+                                <td class="result">답변완료</td>
+                            </tr>
+                            <tr>
+                                <td class="num">4</td>
+                                <td class="tit">비밀글입니다.</td>
+                                <td class="name">추**</td>
+                                <td class="day">2024.11.11</td>
+                                <td class="result">답변완료</td>
+                            </tr>
+                        </tbody>
+                        </table>
+                        <ul class="pagination">
+                            <li class="first disabled"><span>..</span></li>
+                            <li class="prev disabled"><span>.</span></li>
+                            
+                                <li class="num active">1</li>
+                            
+                                <li class="num ">2</li>
+                            
+                                <li class="num ">3</li>
+                            
+                                <li class="num ">4</li>
+                            
+                            <li class="next "><span>.</span></li>
+                            <li class="last "><span>..</span></li>
+                        </ul>
+                </section>
+            </div>
+        </div>
+        <!-- e: best_wrap -->
+
+      
+       
+    </div>
+    <!-- e: cont -->
+
+    <script>
+
+$('.more_btn').click(function() {
+    if ( $('.detail_info .img').hasClass('on') ) {
+        $('.detail_info .img').removeClass('on')
+    }
+    else {
+        $('.detail_info .img').addClass('on')
+    }
+});
+
+        $('.tabs .tab-link').click(function () {
+            // 모든 탭에서 'on' 클래스 제거
+            $('.tabs .tab-link').removeClass('on');
+
+            // 현재 클릭된 탭에 'on' 클래스 추가
+            $(this).addClass('on');
+        });
+
+        $(window).on('scroll', function () {
+            // 현재 스크롤 위치
+            const scrollPosition = $(window).scrollTop();
+
+            // 각 섹션의 위치를 확인
+            $('.detail_info').each(function () {
+                const sectionTop = $(this).offset().top;
+                const sectionHeight = $(this).outerHeight();
+
+                // 해당 섹션에 스크롤 위치가 포함될 때
+                if (scrollPosition >= sectionTop - 110 && scrollPosition < sectionTop + sectionHeight) {
+                    const sectionId = $(this).attr('id');
+
+                    // 모든 탭에서 'on' 제거
+                    $('.tabs .tab-link').removeClass('on');
+
+                    // 해당 섹션과 연결된 탭에 'on' 추가
+                    $('.tabs .tab-link[href="#' + sectionId + '"]').addClass('on');
+                }
+            });
+        });
+
+
+
+        //like count down
+        document.addEventListener("DOMContentLoaded", () => {
+            // 요소 가져오기
+            const counterElement = document.getElementById("like_count");
+            const button = document.getElementById("like_btn");
+            const imageElement = document.getElementById("like_img");
+
+            // 초기 변수 설정
+            let isCountingUp = true; // 현재 상태 (카운트업/다운)
+            let count = parseInt(counterElement.textContent); // 기존 카운트 값 가져오기
+
+            // 버튼 클릭 이벤트
+            button.addEventListener("click", () => {
+            if (isCountingUp) {
+                count++; // 카운트업
+                imageElement.src = "/gshop/img/like.png"; // 좋아요 이미지로 변경
+            } else {
+                count--; // 카운트다운
+                imageElement.src = "/gshop/img/unlike.png"; // 좋아요 취소 이미지로 변경
+            }
+
+            // 상태 변경
+            isCountingUp = !isCountingUp;
+
+            // 화면에 표시
+            counterElement.textContent = count;
+            });
+
+        });
+
+        // 수량 감소 함수
+        document.addEventListener("DOMContentLoaded", () => {
+            const input = document.getElementById("quantity_input");
+            const minusBtn = document.getElementById("minus_btn");
+            const plusBtn = document.getElementById("plus_btn");
+
+            minusBtn.addEventListener("click", () => {
+            let quantity = parseInt(input.value);
+            if (quantity > 1) {
+                input.value = quantity - 1;
+            } else {
+                alert("수량은 1 이상이어야 합니다.");
+            }
+            });
+
+            plusBtn.addEventListener("click", () => {
+            let quantity = parseInt(input.value);
+            input.value = quantity + 1;
+            });
+
+            input.addEventListener("change", () => {
+            input.value = input.value.replace(/[^0-9]/g, "");
+            if (input.value === "" || parseInt(input.value) < 1) {
+                input.value = 1;
+            }
+            });
+        });
+
+        // 위로 이동
+function scrollup() {
+    $('html, body').animate({ scrollTop: 0 }, 500); // 0.5초에 걸쳐 위로 이동
+}
+
+// 아래로 이동
+function scrolldown() {
+    const documentHeight = $(document).height(); // 문서 전체 높이
+    const windowHeight = $(window).height(); // 창 높이
+
+    $('html, body').animate({ scrollTop: documentHeight - windowHeight }, 500); // 0.5초에 걸쳐 아래로 이동
+}
+
+
+    </script>
+    <?php include $_SERVER['DOCUMENT_ROOT'] . '/gshop/footer.html'; ?>

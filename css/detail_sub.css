@@ -1,0 +1,98 @@
+.detail_main .txt{margin-top: 30px;}
+.detail_main .stit{font-size: 14px; color:#aaa; line-height: 25px;}
+.detail_main .name{line-height: 25px; font-weight:bold;}
+
+.detail_tab{display:flex; position: sticky;top: 0; background:#fff;}
+.detail_tab a{ width:calc(100% / 4)}
+.detail_tab a{text-align: center;padding: 15px 0; border-bottom:1px solid #aaa; color:#aaa; font-size: 14px;}
+.detail_tab ul .on a{border-bottom:2px solid #333; color:#333}
+
+.detail_info{padding:30px 0;}
+.detail_info .img{max-width: 600px;height: 500px;overflow: hidden; text-align: center; padding: 30px 0; margin:0 auto;}
+.detail_info .img.on{height: auto;}
+.detail_info .img img{width: 100%;}
+.detail_info .more_btn{}
+.detail_info .more_btn button{margin: 20px auto 0; padding: 10px; font-size: 15px; display: block; width: 200px;}
+
+.purch_info .sinfo_tit{margin-top:20px; font-weight: bold; font-size: 14px;}
+.purch_info ul{margin-top:10px;}
+.purch_info ul li p {font-size: 13px;color: #aaa;line-height: 22px;}
+
+.detail_price_bx > div{display: flex; margin-top: 20px;}
+.detail_price_bx .tit{width:100px;line-height: 30px;}
+.sinfo_fl{display: flex;}
+.sinfo_fl .sinfo_tit{width: calc(100% - 120px);}
+.sinfo_fl button{    width: 120px; padding: 7px 0;}
+
+.sel_sz{width: 186px; padding: 7px 10px;}
+.cytptm{    display: flex;border-top: 1px solid #000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: center;background: #fff;}
+    .cytptm .like{width:10%; text-align: center;border-right: 1px solid #000;}
+    .cytptm .like span{display: block; margin-top:5px;}
+    .cytptm .shop_btn, .cytptm .pursh_btn{width:45%; text-align: center;}
+    .cytptm .pursh_btn{background: #ddd;}
+
+.review_bx .mark_bx{border: 1px solid #ddd; display: flex;}
+    .review_bx .mark{ display: flex;width: 50%; justify-content: center;padding: 10px;}
+
+.cs_table{width: 100%; border-top: 2px solid #ddd;margin-top: 20px;
+    border-bottom: 2px solid #ddd;}
+.cs_table td{padding:10px 0;}
+.cs_table tr{ border-top: 1px solid #ddd;}
+.cs_table tr:first-child{ border-top:none;}
+.cs_table .num{width: 5%; text-align: center;}
+.cs_table .tit{width: 55%;}
+.cs_table .name{width: 10%;}
+.cs_table .day{width: 10%;}
+.cs_table .result{width: 5%;text-align: center;}
+
+.pagination{display: flex; justify-content: center; margin-top:10px;}
+.pagination li {
+    height: 22px;
+    width: 22px;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 23px;
+}
+.pagination .num{margin:0 2px;}
+.num_btn{display: flex;}
+.num_btn .count_btn {
+    border: 1px solid #ccc;
+    background-color: #f4f4f4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1.4rem;
+    cursor: pointer;
+    width: 41px;
+    text-align: center;
+    line-height: 37px;
+}
+.num_btn .num_count{    width: 100px;}
+.num_btn .num_count input{padding:0; text-align: center;width: 100%;display: block;}
+
+@media screen and (min-width:400px){
+
+}
+  
+@media screen and (max-width:765px)
+{
+}
+@media screen and (min-width:768px){
+    .detail_main{display: flex;}
+    .detail_main .item_img{width: 30%;}
+    .detail_main .txt{width: 70%;MARGIN: 0 0 0 70px;}
+
+    .cytptm{position: inherit; border:none; margin-top: 25px;}
+    .cytptm .like{border:none;}
+    .cytptm button{border: 1px solid #ddd; margin: 0 5px; border-radius: 3px;}
+}
+
+@media screen and (min-width:1024px){
+    
+}

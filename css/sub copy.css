@@ -1,0 +1,5 @@
+.detail_tab{}
+.detail_tab ul{display:flex;}
+.detail_tab ul li{width:calc(100% / 4)}
+.detail_tab ul li a{text-align: center;padding: 10px 0; border-bottom:1px solid #ddd;}
+.detail_tab ul li .on{border: 1px solid #ddd;border-bottom: none;}

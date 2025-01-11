@@ -1,0 +1,52 @@
+.login-wrap{height:calc(100vh - 65px);display: flex;
+    justify-content: center;
+    align-items: center;}
+.login-bx{}
+.login-tab{display:flex;}
+.login-tab li{text-align:center;}
+.login-tab .on a{background:#333; color:#fff;}
+.login-tab li a{display: block; padding: 10px 25px;}
+
+.member-bx{background:#fff;width: 320px; padding: 30px; border-top:1px solid#ddd;}
+/* .member{display:flex;} */
+.member-input{}
+.loginput:first-child{margin-top:0;}
+.loginput{ margin-top:10px;}
+.loginput input{width: calc(100% - 40px);
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    font-size: 17px;}
+   .login-btn button{background: #ddd;
+        width: 100%;
+        border: none;
+        padding: 10px 0;
+        font-size: 17px;
+        margin-top: 11px;cursor: pointer;}
+    .link{display:flex; justify-content: center; margin-top:20px;}
+    .link li{    font-size: 15px;
+        padding:0 10px;
+        position: relative;}
+        .link li:after {
+            display: block;
+            clear: both;
+            content: "";
+            border-right: 1px solid #ccc;
+            height: 17px;
+            position: absolute;
+            top: 3px;
+            right:0;
+        }
+        .link li:last-child::after{display: none;}
+    .link li a{display:block;}
+@media screen and (min-width:360px){
+
+}
+
+@media screen and (min-width:768px){
+
+}
+
+@media screen and (min-width:1024px){
+    
+
+}
