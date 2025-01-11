@@ -1,27 +1,271 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
+<!-- s: header -->
+<header>
+    <div class="inner">
+        <div class="header_inner">
+            <!-- s: logo -->
+            <div class="logo">
+                <a href="../index.html"><img src="../img/logo2.png" alt="로고"></a>
+            </div>
+            <!-- e: logo -->
 
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+            <!-- s: menu -->
+            <div class="menu_wrap pc_block">
+                <!-- s: m_top -->
+                <div class="m_top_wrap m_block">
+                    <div class="head_top">
+                        <a href="" class="m_logo">
+                            <img src="../img/logo.png" alt="로고">
+                        </a>
+                    </div>
 
-    <link rel="stylesheet" href="/gshop/css/common.css">
-    <link rel="stylesheet" href="/gshop/css/main.css">
-	<link rel="stylesheet" href="/gshop/css/sub.css">
-	<link rel="stylesheet" href="/gshop/css/detail_sub.css">
+                    <div class="m_login_wrap">
+                        <!-- s: 모바일 전용 로그인/회원가입 영역-->
+                        
+                        <div class="m_logout">
+                            <a href="">로그인/회원가입 &gt;</a>
+                        </div>
+                        
+                        <!--  로그인 후 영역 -->
+                        <div class="m_login_wrap" style="display:none;">
+                            <a href="">로그아웃</a>
+                        </div>
+                        <!-- e: 모바일 전용 로그인/회원가입 영역 -->
+                    </div>
 
-    <link rel="stylesheet" href="/gshop/css/login.css">
+                </div>
+                <!-- e: m_top -->
 
-    <link rel="stylesheet" href="/gshop/css/swiper-bundle.min.css">
-    <script src="/gshop/js/jquery-3.4.1.js"></script>
-    <script src="/gshop/js/swiper-bundle.min.js"></script>
-    <script src="/gshop/js/glnb1.js"></script>
-    
+                <!-- s: glnb -->
+                <nav class="glnb_wrap">
+                    <!-- gnb (depth1) -->
+                    <ul class="gnb_wrap">
+                        <li id="glnb" class="depth1_list">
+                            <a href="#" class="depth1" data-target="#depth1-1">기념상품</a>
+                            <!-- lnb (depth2) -->
+                            <div id="depth1-1" class="lnb_wrap">
+                                <ul class="depth2_wrap">
+                                    <li class="depth2_list">
+                                        <a href="#" class="depth2">3,000관중</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="#" class="depth2">윌커슨 완봉승</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="#" class="depth2">전준우 200홈런</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="#" class="depth2">스프링캠프</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="#" class="depth2">유니폼위크</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="#" class="depth2">클래식시리즈</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
 
-    
-    <title>main</title>
-</head>
-<body>
-	<div id="wrap">
+                        <li class="depth1_list">
+                            <a href="#" class="depth1" data-target="#depth1-2">기획전</a>
+                            <!-- lnb (depth2) -->
+                            <div id="depth1-2" class="lnb_wrap">
+                                <ul class="depth2_wrap">
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">에스더버니</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">짱구는 못 말려</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">2024 투혼투지</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">키즈클럽</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="depth1_list">
+                            <a href="/sub/03_uniform.html" class="depth1" data-target="#depth1-3">유니폼</a>
+                            <!-- lnb (depth2) -->
+                            <div id="depth1-3" class="lnb_wrap">
+                                <ul class="depth2_wrap">
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">프로페셔널</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">어센틱</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">레플리카</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">패션</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">패치</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">키즈</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="depth1_list">
+                            <a href="#" class="depth1" data-target="#depth1-4">모자</a>
+                            <!-- lnb (depth2) -->
+                            <div id="depth1-4" class="lnb_wrap">
+                                <ul class="depth2_wrap">
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">프로페셔널</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">어센틱</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">레플리카</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">패션</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">키즈</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="depth1_list">
+                            <a href="#" class="depth1"data-target="#depth1-5">의류</a>
+                            <!-- lnb (depth2) -->
+                            <div id="depth1-5" class="lnb_wrap">
+                                <ul class="depth2_wrap">
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">프로페셔널</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">자켓</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">상의</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">하의</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li class="depth1_list">
+                            <a href="#" class="depth1"data-target="#depth1-5">야구용품</a>
+                            <!-- lnb (depth2) -->
+                            <div id="depth1-5" class="lnb_wrap">
+                                <ul class="depth2_wrap">
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">프로페셔널</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">야구공</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">글러브</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">배트</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">케이스</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li class="depth1_list">
+                            <a href="#" class="depth1"data-target="#depth1-5">응원용품</a>
+                            <!-- lnb (depth2) -->
+                            <div id="depth1-5" class="lnb_wrap">
+                                <ul class="depth2_wrap">
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">응원타월</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">응원도구</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="depth1_list">
+                            <a href="#" class="depth1"data-target="#depth1-5">잡화</a>
+                            <!-- lnb (depth2) -->
+                            <div id="depth1-5" class="lnb_wrap">
+                                <ul class="depth2_wrap">
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">생활용품</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">악세사리</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">문구</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">PET</a>
+                                    </li>
+                                    <li class="depth2_list">
+                                        <a href="" class="depth2">폰케이스</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- e: glnb -->
+
+            </div>
+            <!-- e: menu -->
+
+            <!-- s: utility -->
+            <div class="util_wrap">
+                <!-- 필요한 유틸 btn_ver 추가 -->
+                <div class="util_btn">
+                    <a href="../login/login.html" class="button">
+                        <img src="../img/login.png" alt="로그인">
+                    </a>
+                </div>
+
+                <div class="util_btn">
+                    <a href="" class="button">
+                        <img src="../img/shop.png" alt="장바구니">
+                    </a>
+                </div>
+
+                <div class="util_btn">
+                    <a href="">
+                        <img src="../img/search.png" alt="검색">
+                    </a>
+                </div>
+                
+                
+                <!-- 필요한 유틸 a_ver 추가 -->
+                <!-- <div class="util_btn">
+                    <a class="button" src="">
+                        <img src="" alt="장바구니">
+                    </a>
+                </div> -->
+
+                <!-- m_menu -->
+                <div class="util_btn_menu m_block">
+                    <a href="" class="button">
+                        <img src="../img/menu.png" alt="모바일 메뉴">
+                    </a>
+                </div>
+            </div>
+            <!-- e: utility -->
+        </div><!-- header_inner -->
+    </div><!-- inner -->
+</header>
+<!-- e: header -->

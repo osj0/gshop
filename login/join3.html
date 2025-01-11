@@ -1,6 +1,27 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/gshop/header.html'; ?>
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/gshop/glnb.html'; ?>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
 
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/sub.css">
+	<link rel="stylesheet" href="../css/detail_sub.css">
+
+    <link rel="stylesheet" href="../css/login.css">
+
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/glnb1.js"></script>
+    
+    <title>롯데자이언츠샵</title>
+</head>
+<body>
+	<div id="wrap">
+    <div id="header"></div>
     <!-- s: cont -->
     <div class="cont">
         <div class="inner">
@@ -29,4 +50,21 @@
     </div>
     <!-- e: cont -->
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . '/gshop/footer.html'; ?>
+    <div id="footer"></div>
+    
+    </div>
+    <!-- e: wrap -->
+    <script src="../js/script.js"></script>
+    <script>
+        async function loadHTML(id, file) {
+            const response = await fetch(file);
+            const content = await response.text();
+            document.getElementById(id).innerHTML = content;
+        }
+        
+        loadHTML('header', '../header.html');
+        loadHTML('footer', '../footer.html');
+    </script>
+    </body>
+    
+    </html>

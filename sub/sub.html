@@ -1,30 +1,54 @@
-<?php include '../header.html'; ?>
-<?php include '../glnb.html'; ?>
-  <style>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1">
 
-    /* Sticky Tabs */
-    .tabs {display:flex; position: sticky; top: 0; background-color: #fff;z-index: 1000;}
-    .tabs a {width:calc(100% / 4);
-      color: #333; text-align: center;
-      text-decoration: none;
-      padding: 20px;
-      display: block;
-      border-bottom:2px solid #aaa; 
-      
-    }
-    .tabs .on {color:#ddd; border-bottom:2px solid #ddd;}
-    .tabs a.active {color: #007bff;}
-    /* Section styles */
-    section {
-      border-bottom: 1px solid #ddd;
-      scroll-margin-top: 60px; /* Default offset for smooth scroll */
-    }
-    section:last-child{border-bottom: none;}
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/sub.css">
+	<link rel="stylesheet" href="../css/detail_sub.css">
 
-    .btn_qucik_wrap{position: fixed;
-    bottom: 20px;
-    right: 80px;}
-  </style>
+    <link rel="stylesheet" href="../css/login.css">
+
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script src="../js/swiper-bundle.min.js"></script>
+    <script src="../js/glnb1.js"></script>
+    
+    <title>롯데자이언츠샵</title>
+
+    <style>
+
+        /* Sticky Tabs */
+        .tabs {display:flex; position: sticky; top: 0; background-color: #fff;z-index: 1000;}
+        .tabs a {width:calc(100% / 4);
+          color: #333; text-align: center;
+          text-decoration: none;
+          padding: 20px;
+          display: block;
+          border-bottom:2px solid #aaa; 
+          
+        }
+        .tabs .on {color:#ddd; border-bottom:2px solid #ddd;}
+        .tabs a.active {color: #007bff;}
+        /* Section styles */
+        section {
+          border-bottom: 1px solid #ddd;
+          scroll-margin-top: 60px; /* Default offset for smooth scroll */
+        }
+        section:last-child{border-bottom: none;}
+    
+        .btn_qucik_wrap{position: fixed;
+        bottom: 20px;
+        right: 80px;}
+      </style>
+
+</head>
+<body>
+	<div id="wrap">
+    <div id="header"></div>
 <!-- s: cont -->
 <div class="cont">
     <!-- top 버튼 -->
@@ -43,7 +67,7 @@
                 <!-- s: detail_main -->
                 <div class="detail_main">
                     <div class="item_img">
-                        <div class="imglist"><img src="/gshop/img/uniform1.png" alt=""></div>
+                        <div class="imglist"><img src="../img/uniform1.png" alt=""></div>
                     </div>
                     <div class="txt">
                         <p class="stit">의류 &gt; 상의 (Top)</p>
@@ -94,7 +118,7 @@
                             </div>
                         </div>
                         <div id="fixedElement" class="cytptm">
-                            <button id="like_btn" class="like"><img src="/gshop/img/unlike.png" alt="" id="like_img">
+                            <button id="like_btn" class="like"><img src="../img/unlike.png" alt="" id="like_img">
                                 <span id="like_count">150</span></button>
                             <button class="shop_btn">장바구니</button>
                             <button class="pursh_btn">구매하기</button>
@@ -113,7 +137,7 @@
                 <!-- Sections -->
                 <section id="section1" class="detail_info">
                     <div class="img">
-                        <img src="/gshop/img/text_sub.jpg" alt="">
+                        <img src="../img/text_sub.jpg" alt="">
                     </div>
                     <div class="more_btn">
                         <button>상품설명 더보기</button>
@@ -275,122 +299,141 @@
       
        
     </div>
+</div>
     <!-- e: cont -->
 
+
+    <div id="footer"></div>
+    
+    </div>
+    <!-- e: wrap -->
+    <script src="../js/script.js"></script>
     <script>
-
-$('.more_btn').click(function() {
-    if ( $('.detail_info .img').hasClass('on') ) {
-        $('.detail_info .img').removeClass('on')
-    }
-    else {
-        $('.detail_info .img').addClass('on')
-    }
-});
-
-        $('.tabs .tab-link').click(function () {
-            // 모든 탭에서 'on' 클래스 제거
-            $('.tabs .tab-link').removeClass('on');
-
-            // 현재 클릭된 탭에 'on' 클래스 추가
-            $(this).addClass('on');
-        });
-
-        $(window).on('scroll', function () {
-            // 현재 스크롤 위치
-            const scrollPosition = $(window).scrollTop();
-
-            // 각 섹션의 위치를 확인
-            $('.detail_info').each(function () {
-                const sectionTop = $(this).offset().top;
-                const sectionHeight = $(this).outerHeight();
-
-                // 해당 섹션에 스크롤 위치가 포함될 때
-                if (scrollPosition >= sectionTop - 110 && scrollPosition < sectionTop + sectionHeight) {
-                    const sectionId = $(this).attr('id');
-
-                    // 모든 탭에서 'on' 제거
-                    $('.tabs .tab-link').removeClass('on');
-
-                    // 해당 섹션과 연결된 탭에 'on' 추가
-                    $('.tabs .tab-link[href="#' + sectionId + '"]').addClass('on');
-                }
-            });
-        });
-
-
-
-        //like count down
-        document.addEventListener("DOMContentLoaded", () => {
-            // 요소 가져오기
-            const counterElement = document.getElementById("like_count");
-            const button = document.getElementById("like_btn");
-            const imageElement = document.getElementById("like_img");
-
-            // 초기 변수 설정
-            let isCountingUp = true; // 현재 상태 (카운트업/다운)
-            let count = parseInt(counterElement.textContent); // 기존 카운트 값 가져오기
-
-            // 버튼 클릭 이벤트
-            button.addEventListener("click", () => {
-            if (isCountingUp) {
-                count++; // 카운트업
-                imageElement.src = "/gshop/img/like.png"; // 좋아요 이미지로 변경
-            } else {
-                count--; // 카운트다운
-                imageElement.src = "/gshop/img/unlike.png"; // 좋아요 취소 이미지로 변경
-            }
-
-            // 상태 변경
-            isCountingUp = !isCountingUp;
-
-            // 화면에 표시
-            counterElement.textContent = count;
-            });
-
-        });
-
-        // 수량 감소 함수
-        document.addEventListener("DOMContentLoaded", () => {
-            const input = document.getElementById("quantity_input");
-            const minusBtn = document.getElementById("minus_btn");
-            const plusBtn = document.getElementById("plus_btn");
-
-            minusBtn.addEventListener("click", () => {
-            let quantity = parseInt(input.value);
-            if (quantity > 1) {
-                input.value = quantity - 1;
-            } else {
-                alert("수량은 1 이상이어야 합니다.");
-            }
-            });
-
-            plusBtn.addEventListener("click", () => {
-            let quantity = parseInt(input.value);
-            input.value = quantity + 1;
-            });
-
-            input.addEventListener("change", () => {
-            input.value = input.value.replace(/[^0-9]/g, "");
-            if (input.value === "" || parseInt(input.value) < 1) {
-                input.value = 1;
-            }
-            });
-        });
-
-        // 위로 이동
-function scrollup() {
-    $('html, body').animate({ scrollTop: 0 }, 500); // 0.5초에 걸쳐 위로 이동
-}
-
-// 아래로 이동
-function scrolldown() {
-    const documentHeight = $(document).height(); // 문서 전체 높이
-    const windowHeight = $(window).height(); // 창 높이
-
-    $('html, body').animate({ scrollTop: documentHeight - windowHeight }, 500); // 0.5초에 걸쳐 아래로 이동
-}
-
-
+        async function loadHTML(id, file) {
+            const response = await fetch(file);
+            const content = await response.text();
+            document.getElementById(id).innerHTML = content;
+        }
+        
+        loadHTML('header', '../header.html');
+        loadHTML('footer', '../footer.html');
     </script>
-    <?php include $_SERVER['DOCUMENT_ROOT'] . '/gshop/footer.html'; ?>
+       <script>
+
+        $('.more_btn').click(function() {
+            if ( $('.detail_info .img').hasClass('on') ) {
+                $('.detail_info .img').removeClass('on')
+            }
+            else {
+                $('.detail_info .img').addClass('on')
+            }
+        });
+        
+                $('.tabs .tab-link').click(function () {
+                    // 모든 탭에서 'on' 클래스 제거
+                    $('.tabs .tab-link').removeClass('on');
+        
+                    // 현재 클릭된 탭에 'on' 클래스 추가
+                    $(this).addClass('on');
+                });
+        
+                $(window).on('scroll', function () {
+                    // 현재 스크롤 위치
+                    const scrollPosition = $(window).scrollTop();
+        
+                    // 각 섹션의 위치를 확인
+                    $('.detail_info').each(function () {
+                        const sectionTop = $(this).offset().top;
+                        const sectionHeight = $(this).outerHeight();
+        
+                        // 해당 섹션에 스크롤 위치가 포함될 때
+                        if (scrollPosition >= sectionTop - 110 && scrollPosition < sectionTop + sectionHeight) {
+                            const sectionId = $(this).attr('id');
+        
+                            // 모든 탭에서 'on' 제거
+                            $('.tabs .tab-link').removeClass('on');
+        
+                            // 해당 섹션과 연결된 탭에 'on' 추가
+                            $('.tabs .tab-link[href="#' + sectionId + '"]').addClass('on');
+                        }
+                    });
+                });
+        
+        
+        
+                //like count down
+                document.addEventListener("DOMContentLoaded", () => {
+                    // 요소 가져오기
+                    const counterElement = document.getElementById("like_count");
+                    const button = document.getElementById("like_btn");
+                    const imageElement = document.getElementById("like_img");
+        
+                    // 초기 변수 설정
+                    let isCountingUp = true; // 현재 상태 (카운트업/다운)
+                    let count = parseInt(counterElement.textContent); // 기존 카운트 값 가져오기
+        
+                    // 버튼 클릭 이벤트
+                    button.addEventListener("click", () => {
+                    if (isCountingUp) {
+                        count++; // 카운트업
+                        imageElement.src = "../img/like.png"; // 좋아요 이미지로 변경
+                    } else {
+                        count--; // 카운트다운
+                        imageElement.src = "../img/unlike.png"; // 좋아요 취소 이미지로 변경
+                    }
+        
+                    // 상태 변경
+                    isCountingUp = !isCountingUp;
+        
+                    // 화면에 표시
+                    counterElement.textContent = count;
+                    });
+        
+                });
+        
+                // 수량 감소 함수
+                document.addEventListener("DOMContentLoaded", () => {
+                    const input = document.getElementById("quantity_input");
+                    const minusBtn = document.getElementById("minus_btn");
+                    const plusBtn = document.getElementById("plus_btn");
+        
+                    minusBtn.addEventListener("click", () => {
+                    let quantity = parseInt(input.value);
+                    if (quantity > 1) {
+                        input.value = quantity - 1;
+                    } else {
+                        alert("수량은 1 이상이어야 합니다.");
+                    }
+                    });
+        
+                    plusBtn.addEventListener("click", () => {
+                    let quantity = parseInt(input.value);
+                    input.value = quantity + 1;
+                    });
+        
+                    input.addEventListener("change", () => {
+                    input.value = input.value.replace(/[^0-9]/g, "");
+                    if (input.value === "" || parseInt(input.value) < 1) {
+                        input.value = 1;
+                    }
+                    });
+                });
+        
+                // 위로 이동
+        function scrollup() {
+            $('html, body').animate({ scrollTop: 0 }, 500); // 0.5초에 걸쳐 위로 이동
+        }
+        
+        // 아래로 이동
+        function scrolldown() {
+            const documentHeight = $(document).height(); // 문서 전체 높이
+            const windowHeight = $(window).height(); // 창 높이
+        
+            $('html, body').animate({ scrollTop: documentHeight - windowHeight }, 500); // 0.5초에 걸쳐 아래로 이동
+        }
+        
+        
+            </script>
+    </body>
+    
+    </html>
